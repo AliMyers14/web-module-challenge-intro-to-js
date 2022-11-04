@@ -55,11 +55,15 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let year = "1999"
+console.log(typeof year);
+Number(year);
+console.log(typeof Number(year), year);
 
 
 
 /*
+.,
 Task 1d - Multiply
  
 Do the following:   
@@ -71,7 +75,8 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+multiply(2,5)
+console.log(multiply(2,5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -84,9 +89,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
+function dogYears(num1){
+  return num1 * 7;
+};
+dogYears(3);
+console.log(dogYears(3))
 
 
 
@@ -136,10 +143,36 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(weight, age){
+  if (age >= 1){
+    if (weight <= 5){
+      return multiply(weight, .05)
+    }
+    if (weight > 5 && weight <= 10){
+      return multiply(weight, .04)
+    }
+    if (weight > 10 && weight <= 15){
+      return weight * .03
+    }
+    if (weight > 15){
+      return multiply(weight, .02)
+    }
+    
+  } else {
+    if (age >= 0.17 && age <= 0.33){
+      return multiply(weight, .10)
+    }
+    if (age > .33 && age <= .58){
+      return multiply(weight, .05)
+    }
+    if (age > .58 && age <= 1){
+      return multiply(weight, .04)
+    }
 
+  }
+  
+}
+console.log(hungryDog(10, .6))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
