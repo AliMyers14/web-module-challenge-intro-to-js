@@ -19,7 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 
 /*
@@ -33,8 +36,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+ let firstThing = true
+ const secondThing = 2
+ if (secondThing < 10) {
+  firstThing = false
+ }
+console.log(firstThing);
 
 
 
