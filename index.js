@@ -196,11 +196,44 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+
+let compChoice = Math.random()
+let userChoice = Math.random()
+
+if (compChoice < .3){
+  compChoice = 'rock'
+} else if (compChoice >= .3 && compChoice <= .6){
+  compChoice = 'paper'
+} else {
+  compChoice = 'scissors'
 }
 
+if (userChoice < .3){
+  userChoice = 'rock'
+}
+else if (userChoice >= .3 && userChoice <= .6){
+  userChoice ='paper'
+}
+else {
+  userChoice = 'scissors'
+}
 
+function game(user, computer){
+  if (user === computer){
+  return "it's a tie"
+  }
+  if (user === 'rock' && computer === 'scissors'){
+    return "you win!"
+  } else if (user === 'paper' && computer === 'rock'){
+    return "you win!"
+  } else if (user === 'scissors' && computer === 'paper'){
+    return "you win!"
+  } else {
+    return "you lose!"
+  }
+}
+game(userChoice, compChoice)
+  console.log(game(userChoice, compChoice))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -213,11 +246,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+
+function miles(kilometers){
+  const myMiles = kilometers * .621371
+  return myMiles
 }
-
-
+miles(12)
+console.log(miles(12))
 
 //Task 5b - Centimeters to Feet
 /*
@@ -227,11 +262,12 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(centimeters){
+  const myFeet = centimeters / 30.48
+  return myFeet
 }
-
-
+feet(170)
+console.log(feet(170))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -247,9 +283,16 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(number){
+    return number + " bottles of soda on the wall, " + number + " bottles of soda, take one down pass it around " + (number - 1) + " bottles of soda on the wall"
+  
+  }
+  let counter = 14;
+  while (counter > 0) {
+    console.log(annoyingSong(counter))
+    counter = counter - 1
+  }
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
