@@ -310,11 +310,26 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score >= 90){
+    return "you got an A"
+  }
+  if (score >= 80 && score <= 89){
+    return "you got a B"
+  }
+  if (score >= 70 && score <= 79){
+    return "you got a C"
+  }
+  if (score >= 60 && score <= 69){
+    return "you got a D"
+  }
+  if (score < 69){
+    return "you got an F"
+  }
+  return Math.floor(Math.random() * 100 - 0 + 0)
 }
 
-
+grade(Math.floor(Math.random() * 100 - 0 + 0))
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -329,10 +344,17 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(word) {
+  let vowelCount = 0
+  for (var i = 0; i <= word.length - 1; i++) {
+    if ('aeiou'.includes(word[i].toLowerCase())) {
+      vowelCount += 1;
+    }
+  }
+  return vowelCount
 }
-
+vowelCounter('beautimus')
+console.log(vowelCounter('beautimus'))
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
